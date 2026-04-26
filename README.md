@@ -1,89 +1,95 @@
 # USA Air Quality Analysis Dashboard
 
-Analyze air quality across all 50 U.S. states using Python and Tableau, then present the results through state rankings, trend analysis, and GIS-based dashboard views.
+<p align="center">
+  Analyze air quality across all 50 U.S. states with Python, build insights from AQI trends, and package the results for Tableau and GIS-style storytelling.
+</p>
 
-## Project Objective
+<p align="center">
+  <img src="visuals/top_10_polluted_states.png" alt="Top 10 Polluted States" width="900">
+</p>
 
-This project focuses on:
+<p align="center">
+  <strong>Python</strong> · <strong>Pandas</strong> · <strong>Matplotlib</strong> · <strong>Seaborn</strong> · <strong>Tableau</strong>
+</p>
 
-- collecting U.S. air quality data
-- cleaning and standardizing pollutant records
-- calculating average AQI by state
-- ranking states by pollution level
-- building visualizations and a final dashboard
+## Overview
 
-## Recommended 4-Phase Plan
+This project turns raw U.S. air quality data into a portfolio-ready analytics workflow:
 
-### Phase 1: Data Collection and Project Setup
+- clean and standardize state-level AQI records
+- calculate average AQI by state
+- rank the most and least polluted states
+- generate charts for storytelling
+- prepare Tableau-ready dashboard files
+
+## What This Project Delivers
+
+- `State`-wise average AQI analysis across all 50 U.S. states
+- pollution ranking tables for comparison
+- monthly AQI trend summaries
+- pollutant correlation analysis
+- Tableau-ready files for dashboards and U.S. map views
+
+## Visual Showcase
+
+### Top 10 Polluted States
+
+![Top 10 Polluted States](visuals/top_10_polluted_states.png)
+
+### 10 Cleanest States
+
+![10 Cleanest States](visuals/top_10_cleanest_states.png)
+
+### Monthly AQI Trend
+
+![Monthly AQI Trend](visuals/monthly_aqi_trend.png)
+
+### Pollutant Correlation Heatmap
+
+![Pollutant Correlation Heatmap](visuals/pollutant_correlation_heatmap.png)
+
+### AQI Category Distribution
+
+![AQI Category Distribution](visuals/aqi_category_distribution.png)
+
+## Project Workflow
+
+### Phase 1. Data Collection and Setup
 
 Goal: gather a reliable dataset and organize the repository.
 
-Tasks:
-
 - download EPA or Kaggle air quality CSV data
-- verify core fields like `State`, `Date`, and `AQI`
-- store original files in `data/raw/`
-- document source details and scope
+- verify key columns such as `State`, `Date`, and `AQI`
+- place original files in `data/raw/`
 
-Deliverables:
-
-- raw dataset
-- finalized repo structure
-- dependency list
-
-### Phase 2: Data Cleaning and Preparation
+### Phase 2. Data Cleaning and Preparation
 
 Goal: make the dataset analysis-ready.
 
-Tasks:
-
-- remove nulls and duplicates
+- remove null values and duplicates
 - standardize state names
-- convert date columns
-- keep useful pollutant columns
-- export cleaned data to `data/processed/`
+- convert dates into usable datetime format
+- retain core AQI and pollutant columns
+- export cleaned files to `data/processed/`
 
-Deliverables:
+### Phase 3. AQI Analysis and Visualization
 
-- cleaned dataset
-- data quality notes
-- reproducible cleaning steps
-
-### Phase 3: AQI Analysis and Visualization
-
-Goal: compute insights and produce charts.
-
-Tasks:
+Goal: compute the core insights.
 
 - calculate average AQI per state
-- create pollution rankings
-- analyze monthly AQI trends
-- build correlation heatmaps and comparison charts
-- save charts in `visuals/`
+- create state pollution rankings
+- build monthly AQI trends
+- generate pollutant correlation analysis
+- export charts to `visuals/`
 
-Deliverables:
+### Phase 4. Dashboard and Portfolio Delivery
 
-- state average AQI table
-- ranked pollution summary
-- exploratory visuals
+Goal: package the analysis for GitHub and Tableau.
 
-### Phase 4: Dashboard, GIS Storytelling, and Portfolio Delivery
-
-Goal: turn the analysis into a strong portfolio project.
-
-Tasks:
-
-- import processed data into Tableau
-- build KPI cards, filters, rankings, and U.S. map
-- prepare project report and presentation
-- write resume-ready project summary
-
-Deliverables:
-
-- Tableau dashboard
-- final report
-- presentation PDF
-- polished GitHub README
+- prepare Tableau-ready files
+- build a U.S. AQI map and ranking dashboard
+- create KPI cards and trend views
+- finalize portfolio documentation
 
 ## Repository Structure
 
@@ -125,75 +131,63 @@ Useful pollutant columns:
 - `CO`
 - `O3`
 
-## Starter Workflow
+## Quick Start
 
-1. Place the source CSV inside `data/raw/`.
-2. Clean and standardize the dataset.
-3. Save the cleaned version to `data/processed/`.
-4. Run state-level AQI analysis.
-5. Export visuals and connect the processed file to Tableau.
-
-## Python Libraries
-
-Install core packages:
+Install dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Optional dashboard package:
+Optional:
 
 ```bash
 pip install streamlit
 ```
 
-## Phase 2 Run Command
+## Run The Pipeline
 
-After placing a raw CSV in `data/raw/`, run:
+### 1. Clean raw data
 
 ```bash
 python -m src.data_cleaning --input data/raw/your_file.csv
 ```
 
-This will:
+This step:
 
-- save a cleaned CSV into `data/processed/`
-- save a JSON cleaning summary into `report/`
-- standardize common column-name variations automatically
+- saves a cleaned CSV into `data/processed/`
+- saves a cleaning summary into `report/`
+- standardizes common column-name variations
 
-## Phase 3 Run Command
-
-After Phase 2 creates a cleaned CSV, run:
+### 2. Run AQI analysis
 
 ```bash
 python3 -m src.aqi_analysis --input data/processed/your_file_cleaned.csv
 ```
 
-This will:
+This step:
 
-- create `state_average_aqi.csv` with rankings
-- export monthly trend and AQI category tables
-- generate chart images inside `visuals/`
-- save a Phase 3 summary report into `report/`
+- creates `state_average_aqi.csv`
+- exports monthly trend and AQI category tables
+- generates chart images inside `visuals/`
+- saves a Phase 3 summary into `report/`
 
-## Phase 4 Run Command
-
-After Phase 3 is complete, run:
+### 3. Prepare Tableau dashboard assets
 
 ```bash
 python3 -m src.dashboard_prep --input data/processed/your_file_cleaned.csv
 ```
 
-This will:
+This step:
 
-- create Tableau-ready state summary files in `dashboard/tableau/`
-- prepare KPI JSON for dashboard cards
-- add map-ready fields like state code and region
-- save a Phase 4 manifest into `report/`
+- creates Tableau-ready summary files in `dashboard/tableau/`
+- prepares KPI JSON for dashboard cards
+- adds map-ready fields like `State_Code` and `Region`
+- saves a Phase 4 manifest into `report/`
 
-## Optional Demo Dataset
+## Demo Dataset
 
-If you want to test the full project before downloading a real dataset, generate a synthetic cleaned file:
+If you want to test the project before downloading a real EPA or Kaggle dataset, generate the synthetic sample:
 
 ```bash
 python3 -m src.generate_sample_data
@@ -205,8 +199,16 @@ This creates:
 
 Important:
 
-- this sample is synthetic for demo purposes
-- replace it with a real EPA or Kaggle dataset before publishing final results
+- this demo dataset is synthetic
+- replace it with a real dataset before final portfolio publishing
+
+## Tableau Outputs
+
+The dashboard prep step creates files ready for Tableau:
+
+- `dashboard/tableau/tableau_state_summary.csv`
+- `dashboard/tableau/tableau_monthly_summary.csv`
+- `dashboard/tableau/dashboard_kpis.json`
 
 ## Resume-Ready Project Title
 
