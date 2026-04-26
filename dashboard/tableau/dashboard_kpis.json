@@ -1,0 +1,11 @@
+{
+  "total_records": 600,
+  "states_covered": 50,
+  "national_average_aqi": 65.11,
+  "date_range_start": "2024-01-15",
+  "date_range_end": "2024-12-15",
+  "most_polluted_state": "California",
+  "most_polluted_state_average_aqi": 113.17,
+  "cleanest_state": "Hawaii",
+  "cleanest_state_average_aqi": 34.17
+}

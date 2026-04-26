@@ -1,0 +1,23 @@
+{
+  "input_file": "/Users/anithakarni/Desktop/AQI Project/USA_Air_Quality_Dashboard/data/processed/sample_aqi_2024_cleaned.csv",
+  "state_count": 50,
+  "records_analyzed": 600,
+  "highest_average_aqi_state": "California",
+  "highest_average_aqi_value": 113.17,
+  "lowest_average_aqi_state": "Hawaii",
+  "lowest_average_aqi_value": 34.17,
+  "monthly_trend_created": true,
+  "correlation_heatmap_created": true,
+  "aqi_category_chart_created": true,
+  "files_created": [
+    "/Users/anithakarni/Desktop/AQI Project/USA_Air_Quality_Dashboard/data/processed/state_average_aqi.csv",
+    "/Users/anithakarni/Desktop/AQI Project/USA_Air_Quality_Dashboard/data/processed/monthly_aqi_trend.csv",
+    "/Users/anithakarni/Desktop/AQI Project/USA_Air_Quality_Dashboard/data/processed/aqi_category_distribution.csv",
+    "/Users/anithakarni/Desktop/AQI Project/USA_Air_Quality_Dashboard/visuals/top_10_polluted_states.png",
+    "/Users/anithakarni/Desktop/AQI Project/USA_Air_Quality_Dashboard/visuals/top_10_cleanest_states.png",
+    "/Users/anithakarni/Desktop/AQI Project/USA_Air_Quality_Dashboard/data/processed/pollutant_correlation.csv",
+    "/Users/anithakarni/Desktop/AQI Project/USA_Air_Quality_Dashboard/visuals/monthly_aqi_trend.png",
+    "/Users/anithakarni/Desktop/AQI Project/USA_Air_Quality_Dashboard/visuals/pollutant_correlation_heatmap.png",
+    "/Users/anithakarni/Desktop/AQI Project/USA_Air_Quality_Dashboard/visuals/aqi_category_distribution.png"
+  ]
+}
