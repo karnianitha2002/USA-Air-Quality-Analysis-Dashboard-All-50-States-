@@ -210,12 +210,3 @@ The dashboard prep step creates files ready for Tableau:
 - `dashboard/tableau/tableau_monthly_summary.csv`
 - `dashboard/tableau/dashboard_kpis.json`
 
-## Resume-Ready Project Title
-
-**Nationwide U.S. Air Quality Intelligence Dashboard**
-
-Suggested description:
-
-- Analyzed air quality data across all 50 U.S. states using Python and Tableau
-- Calculated state-wise average AQI and developed pollution ranking models
-- Built interactive dashboards for environmental monitoring and decision support
